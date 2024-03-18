@@ -3,6 +3,7 @@ package com.example.courseapi.course;
 import com.example.courseapi.topic.Topic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -13,6 +14,7 @@ public class Course {
     private String name;
     private String description;
 
+    @ManyToOne
     private Topic topic;
     public Course(){
 
